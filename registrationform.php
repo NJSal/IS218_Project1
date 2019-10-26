@@ -35,7 +35,7 @@ if(empty($email)){
 }
 
 $j = strpos($email, '@');
-if($j == false){print "<br>Error in Email FIeld: no @ characters found<br>";}
+if($j == false){print "<br>Error in Email Field: no @ characters found<br>";}
 
 if(empty($password)){
     print "<br>Error in Firstname Field: you must enter your firstname<br>";
