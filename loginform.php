@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include("loginform.html");
+//include("loginform.html");
 
 $email = filter_input(INPUT_POST, 'email');
 $password = filter_input(INPUT_POST, 'password');
@@ -25,3 +25,13 @@ print "<br><br>";
 print "Password: $password";
 
 ?>
+
+<!DOCTYPE html>
+<html>
+
+    <span><?php echo htmlspecialchars($email); ?></span>
+    <br>
+    <span><?php echo htmlspecialchars($password); ?></span>
+    <br>
+
+</html>
