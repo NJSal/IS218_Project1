@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include("questionform.html");
+//include("questionform.html");
 
 $name = filter_input(INPUT_POST, 'name');
 $about = filter_input(INPUT_POST, 'about');
@@ -25,11 +25,15 @@ $skillset = explode(',' , $skills);
 $skillselected = count($skillset);
 if($skillselected < 2) {print "<br>Error in Skills Field: please write down at least two skills<br>";}
 
+/*
 print "<br><br>";
 print "Name: $name";
 print "<br><br>";
 print "About: $about";
+*/
 
+
+/*
 $skillset = explode(',' , $skills);
 print "<br><br>";
 print "Skills: ";
@@ -38,11 +42,36 @@ for($i = 0; $i < count($skillset); $i++){
     if($i < (count($skillset) -1)){
         echo ", ";
     }
-
-
-
-
 }
+*/
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Question Form </title>
+    <link rel = "stylesheet" type = "text/css" href = "form.css">
+</head>
+
+<body>
+<main>
+    <h1> Question Form </h1>
+
+            <label> Question 1. Name:</label>
+            <span><?php echo htmlspecialchars($name);?></span>
+            <br>
+
+            <label> Question 2. About You:</label>
+            <span><?php echo htmlspecialchars($about);?></span>
+            <br>
+
+            <label> Skills (comma separated):</label>
+            <span><?php echo htmlspecialchars($skills);?></span>
+            <br>
+
+</main>
+</body>
+</html>

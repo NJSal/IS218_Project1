@@ -19,18 +19,20 @@ $plen = strlen($password);
 if($plen < 8) {echo "<br>Error in Password Field: invalid password length: ".$password." is not at least 8 characters long<br>";}
 if(empty($password)) {print "<br>Error in Password Field: you must enter your password<br>";}
 
+/*
 print "<br><br>";
 print "Email: $email";
 print "<br><br>";
 print "Password: $password";
-
+*/
 ?>
 
 <!DOCTYPE html>
 <html>
-
+    <labeL>Email: </labeL>
     <span><?php echo htmlspecialchars($email); ?></span>
     <br>
+    <label>Password: </label>
     <span><?php echo htmlspecialchars($password); ?></span>
     <br>
 

@@ -42,7 +42,7 @@ $passlen = strlen($password);
 if ($passlen < 8) {
     echo "<br>Error in Password Field: invalid password length: " . $password . " is not at least 8 characters long<br>";
 }
-
+/*
 print "<br><br>";
 print "firstname: $firstname";
 print "<br><br>";
@@ -53,43 +53,41 @@ print "<br><br>";
 print "email: $email";
 print "<br><br>";
 print "password: $password";
-
+*/
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title> Question Form </title>
-    <link rel = "stylesheet" type = "text/css" href = "question.css">
+    <link rel = "stylesheet" type = "text/css" href = "form.css">
 </head>
 
 <body>
 <main>
-    <h1> Question Form </h1>
-    <form action = "registrationform.php" method = "post">
+            <h1> Question Form Answers </h1>
 
-        <div id = "data ">
             <label> First Name: </label>
-            <input type = "text" name = "firstname"><br>
+            <span> <?php echo htmlspecialchars($firstname); ?></span>
+            <br>
 
             <label> Last Name: </label>
-            <input type = "text" name = "lastname"><br>
+            <span> <?php echo htmlspecialchars($lastname); ?></span>
+            <br>
 
             <label> Birthday: </label>
-            <input type="text" name="birthday"><br>
+            <span> <?php echo htmlspecialchars($birthday); ?></span>
+            <br>
 
             <label> Email: </label>
-            <input type="text" name="email"><br>
+            <span> <?php echo htmlspecialchars($email); ?></span>
+            <br>
 
             <label> Password: </label>
-            <input type="text" name="password"><br>
-        </div>
+            <span> <?php echo htmlspecialchars($password); ?></span>
+            <br>
 
-        <div id="buttons">
-            <input type="submit" value = "Submit Responses"><br>
-        </div>
 
-    </form>
 </main>
 </body>
 </html>
